@@ -1,0 +1,53 @@
+###### In DonorSignUpScreen(): ######
+
+CREATE DATABASE IF NOT EXISTS BLOODBANKDB;
+
+USE BLOODBANKDB;
+
+CREATE TABLE IF NOT EXISTS LOGIN_CREDENTIALS(
+DONOR_ID INT(5) AUTO_INCREMENT,
+PASSWORD VARCHAR(15),
+PRIMARY KEY (DONOR_ID));
+
+SELECT * FROM LOGIN_CREDENTIALS;
+
+"INSERT INTO LOGIN_CREDENTIALS(PASSWORD) VALUES ('{}');".format(password)
+____________________________________________________________________________
+
+###### In DonorLoginScreen(): ######
+
+"SELECT * FROM LOGIN_CREDENTIALS WHERE DONOR_ID = '{}' AND PASSWORD = '{}';".format(donor_id, password)
+____________________________________________________________________________
+
+###### In Search(): ######
+
+SELECT * FROM DONOR_INFO;
+
+"SELECT * FROM DONOR_INFO WHERE {} LIKE '{}%';".format(searchgroup, searchvalue)
+____________________________________________________________________________
+
+###### In Modify(): ######
+
+"UPDATE DONOR_INFO SET {} = '{}' WHERE DONOR_ID = {};".format(modifywhat, modifyto, donorid)
+____________________________________________________________________________
+
+###### In DonorPersonalInfo(): ######
+
+CREATE TABLE IF NOT EXISTS DONOR_INFO(
+DONOR_ID INT(5),
+NAME VARCHAR(50),
+AGE CHAR(2),
+EMAIL_ID VARCHAR(50),
+PHONE_NO VARCHAR(12),
+BLOOD_GROUP VARCHAR(5),
+SEX CHAR(1),
+FOREIGN KEY (DONOR_ID) REFERENCES LOGIN_CREDENTIALS(DONOR_ID));
+
+"SELECT * FROM DONOR_INFO WHERE DONOR_ID = {};".format(donor_id)
+
+'''INSERT INTO DONOR_INFO(DONOR_ID,NAME,AGE,PHONE_NO,BLOOD_GROUP,EMAIL_ID,SEX)
+                VALUES ('{}','{}','{}','{}','{}','{}','{}')'''.format(donor_id, name, age, phone_no, blood_grp, email, sex)
+
+'''UPDATE DONOR_INFO SET NAME = '{}',AGE = '{}', PHONE_NO = '{}', BLOOD_GROUP = '{}', EMAIL_ID = '{}',SEX = '{}'
+                WHERE DONOR_ID = '{}';'''.format(name, age, phone_no, blood_grp, email, sex, donor_id)
+____________________________________________________________________________

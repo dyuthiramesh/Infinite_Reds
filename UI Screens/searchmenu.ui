@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1210</width>
+    <height>796</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="bgwidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1211</width>
+     <height>801</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget#bgwidget{
+background-color:qlineargradient(spread:pad, x1:0.096, y1:0.158955, x2:0.893389, y2:0.813, stop:0 rgba(29, 162, 216, 255), stop:1 rgba(222, 243, 246, 255));}
+</string>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>30</y>
+      <width>351</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 28pt &quot;MS Shell Dlg 2&quot;;color:white;</string>
+    </property>
+    <property name="text">
+     <string>ADMIN SCREEN</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>140</y>
+      <width>181</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Search based on:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="homescreenredirect">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>730</y>
+      <width>261</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:20px;
+background-color:#064273;
+font: 12pt &quot;MS Shell Dlg 2&quot;;color:#def3f6;
+</string>
+    </property>
+    <property name="text">
+     <string>GO TO HOME SCREEN</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>140</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;
+font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Search for:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="searchfield">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>140</y>
+      <width>511</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(0,0,0,0);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>270</y>
+      <width>1120</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::PreventContextMenu</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(0,0,0,0);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="alternatingRowColors">
+     <bool>false</bool>
+    </property>
+    <property name="textElideMode">
+     <enum>Qt::ElideMiddle</enum>
+    </property>
+    <column>
+     <property name="text">
+      <string>DONOR ID</string>
+     </property>
+     <property name="textAlignment">
+      <set>AlignCenter</set>
+     </property>
+     <property name="background">
+      <color alpha="0">
+       <red>0</red>
+       <green>0</green>
+       <blue>0</blue>
+      </color>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>NAME</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>AGE</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>EMAIL ID</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>PHONE NO.</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>BLOOD TYPE</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>SEX</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QComboBox" name="searchlist">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>140</y>
+      <width>291</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>DONOR_ID</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>NAME</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>AGE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>EMAIL_ID</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>PHONE_NO</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>BLOOD_GROUP</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>SEX</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="modifyredirect">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>730</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:20px;
+background-color:#064273;
+font: 12pt &quot;MS Shell Dlg 2&quot;;color:#def3f6;
+</string>
+    </property>
+    <property name="text">
+     <string>MODIFY</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="searchbutton">
+    <property name="geometry">
+     <rect>
+      <x>990</x>
+      <y>210</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:20px;
+background-color:#064273;
+font: 12pt &quot;MS Shell Dlg 2&quot;;color:#def3f6;
+</string>
+    </property>
+    <property name="text">
+     <string>SEARCH</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="showallrecs">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>730</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:20px;
+background-color:#064273;
+font: 12pt &quot;MS Shell Dlg 2&quot;;color:#def3f6;
+</string>
+    </property>
+    <property name="text">
+     <string>SHOW ALL RECORDS</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
